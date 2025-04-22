@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hulaan ang Salita!</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f0f0;
+      padding: 30px;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #gameArea {
+      display: none;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+    }
+
+    #guess {
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hulaan ang Salita!</h1>
+
+    <!-- Start Button -->
+    <button id="startBtn" onclick="startGame()">▶️ Simulan</button>
+
+    <!-- Game Area -->
+    <div id="gameArea">
+      <p id="clue">Clue:</p>
+
+      <input type="text" id="guess" placeholder="Ilagay ang sagot dito...">
+      <button onclick="checkAnswer()">Isumite</button>
+
+      <p id="feedback"></p>
+      <p>Puntos: <span id="score">0</span></p>
+
+      <button onclick="nextQuestion()">Susunod na Tanong</button>
+      <p>⏳ Oras: <span id="timer">15</span> segundo</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
